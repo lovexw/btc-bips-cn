@@ -1,0 +1,124 @@
+/* BIP 页面专用样式 */
+
+.bip-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.bip-meta {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.bip-meta p {
+  margin-bottom: 10px;
+}
+
+.bip-meta strong {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* 代码块样式 */
+pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 20px 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f5f5f5;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* 列表样式 */
+.bip-content ul, .bip-content ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.bip-content li {
+  margin-bottom: 10px;
+}
+
+/* 表格样式增强 */
+.bip-content table {
+  border: 1px solid var(--border-color);
+}
+
+.bip-content th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 引用样式 */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+  margin-left: 0;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* 图片样式 */
+.bip-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/* 返回链接样式 */
+header p a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+header p a:hover {
+  background-color: #e67e00;
+  text-decoration: none;
+}
+
+/* 响应式设计增强 */
+@media (max-width: 768px) {
+  .bip-meta {
+    padding: 15px;
+  }
+  
+  pre {
+    padding: 10px;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  header p a {
+    display: none;
+  }
+  
+  .bip-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .bip-meta {
+    border: 1px solid #ddd;
+    border-left: 4px solid var(--primary-color);
+  }
+}

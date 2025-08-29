@@ -1,0 +1,24 @@
+name: 部署到 Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: 部署
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 部署到 Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: bip-bitcoin-cn
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

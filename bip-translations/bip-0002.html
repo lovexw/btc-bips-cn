@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIP-0002: BIP 流程，修订版 - 比特币改进提案中文版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bip.css">
+</head>
+<body>
+  <header>
+    <h1>BIP-0002: BIP 流程，修订版</h1>
+    <p><a href="../index.html">返回首页</a></p>
+  </header>
+
+  <main class="bip-content">
+    <div class="bip-meta">
+      <p><strong>BIP:</strong> 2</p>
+      <p><strong>标题:</strong> BIP 流程，修订版</p>
+      <p><strong>作者:</strong> Luke Dashjr <luke+bip@dashjr.org></p>
+      <p><strong>状态:</strong> 活跃</p>
+      <p><strong>类型:</strong> 流程</p>
+      <p><strong>创建日期:</strong> 2016-02-03</p>
+      <p><strong>替换:</strong> 1</p>
+    </div>
+
+    <section id="abstract">
+      <h2>摘要</h2>
+      <p>比特币改进提案（BIP）是向比特币社区提供信息或描述新功能的设计文档。本文档描述了处理这些 BIP 的流程。</p>
+    </section>
+
+    <section id="copyright">
+      <h2>版权</h2>
+      <p>本 BIP 采用 BSD-2-Clause 许可证授权。</p>
+    </section>
+
+    <section id="bip-workflow">
+      <h2>BIP 工作流程</h2>
+      <p>BIP 流程开始于一个新想法。每个潜在的 BIP 必须有一个拥护者——一个负责将提案推进到共识的人。</p>
+      
+      <h3>以下是 BIP 的生命周期：</h3>
+      <ol>
+        <li>草稿 - BIP 的初始版本</li>
+        <li>提议 - BIP 已正式提交</li>
+        <li>活跃 - BIP 已被接受并且正在实施</li>
+        <li>最终 - BIP 已完成其目标或不再被认为是活跃的</li>
+        <li>替换 - BIP 被更新的 BIP 替换</li>
+        <li>延期 - BIP 不再被考虑</li>
+        <li>撤回 - BIP 被其作者撤回</li>
+      </ol>
+      
+      <h3>BIP 类型</h3>
+      <p>有三种类型的 BIP：</p>
+      <ul>
+        <li><strong>标准 BIP</strong> - 描述影响大多数或所有比特币实现的任何更改，例如网络协议更改、区块或交易验证规则更改，或影响使用比特币的应用程序互操作性的任何更改。</li>
+        <li><strong>信息 BIP</strong> - 描述比特币设计问题，或向比特币社区提供一般指南或信息，但不提出新功能。信息 BIP 不一定代表比特币社区的共识或建议，因此用户和实现者可以自由地忽略信息 BIP 或遵循其建议。</li>
+        <li><strong>流程 BIP</strong> - 描述比特币流程，或提议对流程的更改。流程 BIP 类似于标准 BIP，但适用于比特币协议本身以外的领域。它们可能提议实现，但不适用于比特币代码库；它们通常需要社区共识；与信息 BIP 不同，它们不仅仅是建议，用户通常不能自由地忽略它们。</li>
+      </ul>
+    </section>
+
+    <section id="bip-format">
+      <h2>BIP 格式和结构</h2>
+      <p>BIP 应该包含以下部分：</p>
+      <ul>
+        <li>前言（标题、作者等）</li>
+        <li>摘要 - 提供 BIP 的简明技术描述</li>
+        <li>版权/公共领域 - BIP 必须在公共领域或采用开源许可证</li>
+        <li>规范 - 技术规范应足够详细，以允许兼容的实现</li>
+        <li>动机 - 动机是 BIP 的重要组成部分</li>
+        <li>基本原理 - 基本原理描述了为什么特定设计决策在 BIP 中做出</li>
+        <li>向后兼容性 - BIP 中的所有 BIP 都应该考虑向后兼容性</li>
+        <li>参考实现 - 参考实现必须在 BIP 被标记为"最终"之前完成</li>
+      </ul>
+    </section>
+
+    <section id="bip-editors">
+      <h2>BIP 编辑</h2>
+      <p>当前的 BIP 编辑是：</p>
+      <ul>
+        <li>Luke Dashjr</li>
+      </ul>
+      <p>BIP 编辑的职责包括：</p>
+      <ul>
+        <li>阅读 BIP 以确保它们技术上合理且符合要求</li>
+        <li>为 BIP 分配编号</li>
+        <li>将 BIP 合并到 BIP 存储库中</li>
+        <li>指导 BIP 作者完成 BIP 流程</li>
+      </ul>
+    </section>
+
+    <section id="bip-history">
+      <h2>BIP 历史</h2>
+      <p>本文档基于 Python 增强提案（PEP）流程，该流程本身基于 Python 的开发流程。原始 BIP-1 由 Amir Taaki 编写，后来由 Luke Dashjr 修订为 BIP-2。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>本文档是 <a href="https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki" target="_blank">BIP-0002</a> 的中文翻译版本。如发现翻译错误或有改进建议，请提交 Issue 或 Pull Request。</p>
+    <p>&copy; 比特币改进提案中文版</p>
+  </footer>
+</body>
+</html>

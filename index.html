@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>比特币改进提案 (BIPs) - 中文版</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="比特币改进提案(BIPs)的中文翻译版本，提供比特币协议和应用的技术规范和改进建议。">
+</head>
+<body>
+  <header>
+    <h1>比特币改进提案 (BIPs)</h1>
+    <p>中文版</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>什么是比特币改进提案？</h2>
+      <p>比特币改进提案 (BIP) 是为比特币社区提供信息，或描述比特币或其流程或环境的新功能的设计文档。</p>
+      <p>BIP 应该提供该功能的简明技术规范和该功能的基本原理。BIP 作者负责在社区内建立共识并记录不同意见。</p>
+      
+      <div class="featured-bips">
+        <h3>热门 BIP</h3>
+        <ul>
+          <li><a href="bip-translations/bip-0001.html">BIP-0001: BIP 目的和指南</a></li>
+          <li><a href="bip-translations/bip-0002.html">BIP-0002: BIP 流程，修订版</a> <span class="new-badge">新</span></li>
+          <li><a href="bip-translations/bip-0039.html">BIP-0039: 助记词标准</a> <span class="new-badge">新</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bip-list">
+      <h2>BIP 分类</h2>
+      
+      <h3>标准类 BIP</h3>
+      <p>描述影响大多数或所有比特币实现的任何更改，例如网络协议的更改、区块或交易有效性规则的更改，或影响使用比特币的应用程序互操作性的任何更改。</p>
+      
+      <h3>信息类 BIP</h3>
+      <p>描述比特币设计问题，或向比特币社区提供一般指南或信息，但不提出新功能。信息类 BIP 不一定代表比特币社区的共识或建议，因此用户和实现者可以自由地忽略信息类 BIP 或遵循其建议。</p>
+      
+      <h3>流程类 BIP</h3>
+      <p>描述比特币流程的更改，或者提议比特币流程之外的流程更改。流程类 BIP 类似于标准类 BIP，但适用于比特币协议本身以外的其他领域。</p>
+    </section>
+
+    <section class="bip-table">
+      <h2>所有 BIP 列表</h2>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索 BIP...">
+      </div>
+      
+      <div class="filter-container">
+        <div class="filter-group">
+          <label for="layer-filter">层级:</label>
+          <select id="layer-filter">
+            <option value="">全部</option>
+            <option value="共识">共识</option>
+            <option value="应用">应用</option>
+            <option value="流程">流程</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="type-filter">类型:</label>
+          <select id="type-filter">
+            <option value="">全部</option>
+            <option value="标准">标准</option>
+            <option value="信息">信息</option>
+            <option value="流程">流程</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="status-filter">状态:</label>
+          <select id="status-filter">
+            <option value="">全部</option>
+            <option value="草稿">草稿</option>
+            <option value="提议">提议</option>
+            <option value="活跃">活跃</option>
+            <option value="最终">最终</option>
+            <option value="替换">替换</option>
+            <option value="延期">延期</option>
+            <option value="撤回">撤回</option>
+          </select>
+        </div>
+        
+        <button id="reset-filters">重置筛选</button>
+      </div>
+      
+      <div class="table-container">
+        <table id="bip-table" class="sortable">
+          <thead>
+            <tr>
+              <th>编号</th>
+              <th>层级</th>
+              <th>类型</th>
+              <th>状态</th>
+              <th>标题</th>
+              <th>作者</th>
+            </tr>
+          </thead>
+          <tbody id="bip-table-body">
+            <!-- 这里将通过 JavaScript 动态填充 BIP 列表 -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>本网站是 <a href="https://github.com/bitcoin/bips">比特币 BIPs</a> 的中文翻译版本。</p>
+    <p>原始内容采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    <p>翻译内容采用相同许可证授权。</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

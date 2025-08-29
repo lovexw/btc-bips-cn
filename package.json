@@ -1,0 +1,26 @@
+{
+  "name": "bip-bitcoin-cn",
+  "version": "1.0.0",
+  "description": "比特币改进提案(BIPs)中文版",
+  "main": "index.js",
+  "scripts": {
+    "generate-template": "node scripts/generate_bip_template.js",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/bip-bitcoin-cn.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "bip",
+    "chinese",
+    "translation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/bip-bitcoin-cn/issues"
+  },
+  "homepage": "https://github.com/yourusername/bip-bitcoin-cn#readme"
+}

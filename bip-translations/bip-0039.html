@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIP-0039: 助记词标准 - 比特币改进提案中文版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bip.css">
+</head>
+<body>
+  <header>
+    <h1>BIP-0039: 助记词标准</h1>
+    <p><a href="../index.html">返回首页</a></p>
+  </header>
+
+  <main class="bip-content">
+    <div class="bip-meta">
+      <p><strong>BIP:</strong> 39</p>
+      <p><strong>标题:</strong> 助记词标准</p>
+      <p><strong>作者:</strong> Marek Palatinus <slush@satoshilabs.com><br>
+         Pavol Rusnak <stick@satoshilabs.com><br>
+         Aaron Voisine <voisine@gmail.com><br>
+         Sean Bowe <ewillbefull@gmail.com></p>
+      <p><strong>状态:</strong> 已提议</p>
+      <p><strong>类型:</strong> 标准</p>
+      <p><strong>创建日期:</strong> 2013-09-10</p>
+    </div>
+
+    <section id="abstract">
+      <h2>摘要</h2>
+      <p>本 BIP 描述了确定性钱包的助记词生成和使用的规范。</p>
+    </section>
+
+    <section id="motivation">
+      <h2>动机</h2>
+      <p>助记词是一种将随机数据转换为易于记忆的单词序列的方法。这种方法在比特币钱包中特别有用，因为它可以帮助用户备份和恢复他们的钱包。</p>
+      <p>比特币钱包使用的私钥通常是随机生成的。为了避免在钱包丢失或损坏时丢失资金，用户需要备份这些私钥。然而，直接备份随机生成的私钥是不实用的，因为它们很难记忆和手动输入。</p>
+      <p>助记词通过将随机数据转换为一系列单词来解决这个问题，这些单词更容易记忆和手动输入。这使得用户可以更容易地备份和恢复他们的钱包。</p>
+    </section>
+
+    <section id="specification">
+      <h2>规范</h2>
+      <h3>生成助记词</h3>
+      <ol>
+        <li>创建一个 128 到 256 位的随机序列（熵）。</li>
+        <li>取这个随机序列的 SHA256 哈希的前 n/32 位，其中 n 是初始熵的长度。这些位将作为校验和。</li>
+        <li>将校验和添加到随机序列的末尾。</li>
+        <li>将组合后的位序列分割成 11 位的段。</li>
+        <li>将每个 11 位的值映射到预定义的 2048 个单词列表中的一个单词。</li>
+        <li>助记词是按顺序排列的单词列表。</li>
+      </ol>
+
+      <h3>熵长度与助记词长度的关系</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>熵 (位)</th>
+            <th>校验和 (位)</th>
+            <th>熵+校验和 (位)</th>
+            <th>助记词长度 (单词)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>128</td>
+            <td>4</td>
+            <td>132</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>160</td>
+            <td>5</td>
+            <td>165</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>192</td>
+            <td>6</td>
+            <td>198</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>224</td>
+            <td>7</td>
+            <td>231</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>256</td>
+            <td>8</td>
+            <td>264</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>从助记词生成种子</h3>
+      <p>助记词表示熵，可用于生成确定性钱包。但是，它不能直接用作种子，因为它不提供足够的熵。</p>
+      <p>相反，助记词与可选的用户提供的密码一起使用，通过 PBKDF2 函数生成种子。</p>
+      <ol>
+        <li>将助记词作为 PBKDF2 的密码。</li>
+        <li>将字符串 "mnemonic" 与可选的用户提供的密码连接起来，作为 PBKDF2 的盐。</li>
+        <li>使用 HMAC-SHA512 作为伪随机函数，2048 次迭代，输出长度为 512 位（64 字节）。</li>
+        <li>生成的 512 位种子可用于创建确定性钱包。</li>
+      </ol>
+    </section>
+
+    <section id="wordlists">
+      <h2>单词列表</h2>
+      <p>单词列表是预先定义的，包含 2048 个单词。为了便于使用，单词列表被设计为使每个单词的前四个字母是唯一的。这使得用户可以只输入每个单词的前四个字母，而不是整个单词。</p>
+      <p>BIP-0039 规范包括多种语言的单词列表，包括英语、日语、韩语、西班牙语、中文（简体和繁体）、法语和意大利语。</p>
+      <p>中文单词列表可以在 <a href="https://github.com/bitcoin/bips/blob/master/bip-0039/chinese_simplified.txt" target="_blank">GitHub</a> 上找到。</p>
+    </section>
+
+    <section id="examples">
+      <h2>示例</h2>
+      <h3>英语</h3>
+      <p>熵: 0x0c1e24e5917779d297e14d45f14e1a1a</p>
+      <p>助记词: army van defense carry jealous true garbage claim echo media make crunch</p>
+      <p>种子 (无密码): 5b56c417303faa3fcba7e57400e120a0ca83ec5a4fc9ffba757fbe63fbd77a89a1a3be4c67196f57c39a88b76373733891bfaba16ed27a813ceed498804c0570</p>
+      <p>种子 (密码 "TREZOR"): 3b5df16df2157104cfdd22830162a5e170c0161653e3afe6c88defeefb0818c793dbb28ab3ab091897d0715861dc8a18358f80b79d49acf64142ae57037d1d54</p>
+      
+      <h3>日语</h3>
+      <p>熵: 0x0c1e24e5917779d297e14d45f14e1a1a</p>
+      <p>助记词: あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あいこくしん あおぞら</p>
+      <p>种子 (无密码): a262d6fb6122ecf45be09c50492b31f92e9beb7d9a845987a02cefda57a15f9c467a17872029a9e92299b5cbdf306e3a0ee620245cbd508959b6cb7ca637bd55</p>
+      <p>种子 (密码 "㍍ガバヴァぱばぐゞちぢ十人十色"): 346b7321d8c04f6f37b49fdf062a2fddc8e1bf8f1d33171b65074531ec546d1d3469974beccb1a09263440fc92e1042580a557fdce314e27ee4eabb25fa5e5fe</p>
+    </section>
+
+    <section id="test-vectors">
+      <h2>测试向量</h2>
+      <p>完整的测试向量可以在 <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Test_vectors" target="_blank">BIP-0039 规范</a> 中找到。</p>
+    </section>
+
+    <section id="reference-implementation">
+      <h2>参考实现</h2>
+      <p>参考实现可以在以下位置找到：</p>
+      <ul>
+        <li><a href="https://github.com/trezor/python-mnemonic" target="_blank">Python</a></li>
+        <li><a href="https://github.com/bitcoinjs/bip39" target="_blank">JavaScript</a></li>
+        <li><a href="https://github.com/libbitcoin/libbitcoin/blob/master/src/wallet/mnemonic.cpp" target="_blank">C++</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>本文档是 <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank">BIP-0039</a> 的中文翻译版本。如发现翻译错误或有改进建议，请提交 Issue 或 Pull Request。</p>
+    <p>&copy; 比特币改进提案中文版</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+[
+  {
+    "number": 1,
+    "title": "BIP 目的和指南",
+    "author": "Amir Taaki",
+    "status": "替换",
+    "type": "流程",
+    "layer": "流程"
+  },
+  {
+    "number": 2,
+    "title": "BIP 流程，修订版",
+    "author": "Luke Dashjr",
+    "status": "活跃",
+    "type": "流程",
+    "layer": "流程"
+  },
+  {
+    "number": 9,
+    "title": "版本位的替代方案",
+    "author": "Amir Taaki",
+    "status": "撤回",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 11,
+    "title": "M-of-N 标准交易",
+    "author": "Gavin Andresen",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 13,
+    "title": "地址格式的脚本操作码",
+    "author": "Gavin Andresen",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 14,
+    "title": "多重签名交易的协议规范",
+    "author": "Gavin Andresen",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 16,
+    "title": "支付请求的 CHECKLOCKTIMEVERIFY",
+    "author": "Gavin Andresen",
+    "status": "撤回",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 17,
+    "title": "OP_CHECKLOCKTIMEVERIFY",
+    "author": "Peter Todd",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 21,
+    "title": "基于 URI 的比特币支付请求",
+    "author": "Nils Schneider, Matt Corallo",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 22,
+    "title": "比特币的支付协议",
+    "author": "Gavin Andresen",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 23,
+    "title": "比特币支付请求的消息签名",
+    "author": "Mike Hearn",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 30,
+    "title": "重复的交易",
+    "author": "Pieter Wuille",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 32,
+    "title": "分层确定性钱包",
+    "author": "Pieter Wuille",
+    "status": "最终",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 39,
+    "title": "助记词标准",
+    "author": "Marek Palatinus, Pavol Rusnak, Aaron Voisine, Sean Bowe",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 44,
+    "title": "多账户层次确定性钱包",
+    "author": "Marek Palatinus, Pavol Rusnak",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 49,
+    "title": "使用 P2WPKH 嵌套在 P2SH 中的派生方案",
+    "author": "Daniel Weigl",
+    "status": "提议",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 84,
+    "title": "使用原生 P2WPKH 的派生方案",
+    "author": "Pavol Rusnak",
+    "status": "提议",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 112,
+    "title": "CHECKSEQUENCEVERIFY",
+    "author": "BtcDrak, Mark Friedenbach, Eric Lombrozo",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 125,
+    "title": "Opt-in Full Replace-by-Fee Signaling",
+    "author": "David A. Harding, Peter Todd",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 141,
+    "title": "隔离见证 (共识层)",
+    "author": "Eric Lombrozo, Johnson Lau, Pieter Wuille",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 143,
+    "title": "交易签名验证",
+    "author": "Johnson Lau, Pieter Wuille",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 144,
+    "title": "隔离见证 (钱包接口)",
+    "author": "Johnson Lau, Pieter Wuille",
+    "status": "最终",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 146,
+    "title": "Compact Block Relay",
+    "author": "Matt Corallo",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 148,
+    "title": "隔离见证的版本位部署",
+    "author": "Shaolin Fry",
+    "status": "提议",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 150,
+    "title": "隔离见证的 peer-to-peer 通信",
+    "author": "Eric Lombrozo",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 173,
+    "title": "基本支付通道",
+    "author": "Christian Decker",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 174,
+    "title": "闪电网络 BOLT",
+    "author": "Christian Decker",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 340,
+    "title": "Schnorr 签名比特币",
+    "author": "Pieter Wuille, Jonas Nick, Tim Ruffing",
+    "status": "提议",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 341,
+    "title": "Taproot: SegWit 版本 1 花费规则",
+    "author": "Pieter Wuille, Jonas Nick, Anthony Towns",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 342,
+    "title": "验证 Taproot 脚本",
+    "author": "Pieter Wuille, Jonas Nick, Anthony Towns",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 343,
+    "title": "Taproot 的版本位部署",
+    "author": "Taproot 激活者",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 350,
+    "title": "Bech32m 格式",
+    "author": "Pieter Wuille",
+    "status": "提议",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 370,
+    "title": "PSBT 版本 2",
+    "author": "Andrew Chow",
+    "status": "草稿",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 380,
+    "title": "输出脚本描述符",
+    "author": "Pieter Wuille",
+    "status": "草稿",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 383,
+    "title": "分层确定性脚本模板",
+    "author": "Ava Chow",
+    "status": "草稿",
+    "type": "信息",
+    "layer": "应用"
+  },
+  {
+    "number": 386,
+    "title": "Partially Signed Bitcoin Transaction Format 的 Taproot 扩展",
+    "author": "Andrew Chow",
+    "status": "草稿",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 390,
+    "title": "Schnorr 签名的 Partially Signed Bitcoin Transaction Format 扩展",
+    "author": "Andrew Chow",
+    "status": "草稿",
+    "type": "标准",
+    "layer": "应用"
+  }
+]

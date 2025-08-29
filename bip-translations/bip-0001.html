@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIP-0001: BIP 目的和指南 - 比特币改进提案中文版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bip.css">
+</head>
+<body>
+  <header>
+    <h1>BIP-0001: BIP 目的和指南</h1>
+    <p><a href="../index.html">返回首页</a></p>
+  </header>
+
+  <main class="bip-content">
+    <div class="bip-meta">
+      <p><strong>BIP:</strong> 1</p>
+      <p><strong>标题:</strong> BIP 目的和指南</p>
+      <p><strong>作者:</strong> Amir Taaki <bitcointalk.org@genjix.com></p>
+      <p><strong>状态:</strong> 活跃</p>
+      <p><strong>类型:</strong> 流程</p>
+      <p><strong>创建日期:</strong> 2011-08-19</p>
+    </div>
+
+    <section>
+      <h2>摘要</h2>
+      <p>BIP 代表比特币改进提案。BIP 是一种设计文档，为比特币社区提供信息，或描述比特币或其流程或环境的新功能。BIP 应该提供该功能的简明技术规范和该功能的基本原理。BIP 作者负责在社区内建立共识并记录不同意见。</p>
+    </section>
+
+    <section>
+      <h2>版权</h2>
+      <p>本 BIP 采用 PD（公共领域）许可证。</p>
+    </section>
+
+    <section>
+      <h2>BIP 工作流程</h2>
+      <p>BIP 编辑器将 BIP 分配一个号码，并检查 BIP 的语言（拼写，语法，句子结构等）、风格和结构是否清晰，以及检查 XML 格式是否有效。如果 BIP 没有准备好，编辑将把它送回给作者进行修改。</p>
+      
+      <p>一旦 BIP 被接受，它将被发布在 bitcoin.org wiki 上。</p>
+      
+      <p>如果 BIP 需要实现，那么实现后，BIP 的状态将更改为"最终"。</p>
+      
+      <p>一旦 BIP 被接受，BIP 应该在 bitcoin.org wiki 上发布。这将使社区有机会讨论 BIP 并提供反馈。</p>
+    </section>
+
+    <section>
+      <h2>BIP 格式和结构</h2>
+      <h3>前言</h3>
+      <p>每个 BIP 必须以 XML 格式的前言开始，后跟 RFC 822 风格的标题，内容为：</p>
+      <pre>
+  BIP: <BIP 编号，或者"?"如果未分配>
+  标题: <BIP 标题，最多 44 个字符>
+  作者: <作者姓名和电子邮件地址的列表>
+  状态: <草稿 | 活跃 | 接受 | 延期 | 替换 | 过时 | 撤回 | 最终 | 超级过时>
+  类型: <标准 | 信息 | 流程>
+  创建日期: <yyyy-mm-dd>
+      </pre>
+      
+      <h3>类型</h3>
+      <p>有三种类型的 BIP：</p>
+      <ul>
+        <li><strong>标准类 BIP</strong> 描述影响大多数或所有比特币实现的任何更改，例如网络协议的更改、区块或交易有效性规则的更改，或影响使用比特币的应用程序互操作性的任何更改。</li>
+        <li><strong>信息类 BIP</strong> 描述比特币设计问题，或向比特币社区提供一般指南或信息，但不提出新功能。信息类 BIP 不一定代表比特币社区的共识或建议，因此用户和实现者可以自由地忽略信息类 BIP 或遵循其建议。</li>
+        <li><strong>流程类 BIP</strong> 描述比特币流程的更改，或者提议比特币流程之外的流程更改。流程类 BIP 类似于标准类 BIP，但适用于比特币协议本身以外的其他领域。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>BIP 状态字段</h2>
+      <ul>
+        <li><strong>草稿</strong> - BIP 正在制定中。</li>
+        <li><strong>活跃</strong> - BIP 正在积极维护和更新。</li>
+        <li><strong>接受</strong> - 这种状态类似于活跃，但表示 BIP 已准备好实施。</li>
+        <li><strong>延期</strong> - BIP 暂时不会进一步推进，直到某些其他事情发生。</li>
+        <li><strong>替换</strong> - BIP 被另一个 BIP 替换。</li>
+        <li><strong>过时</strong> - BIP 不再相关。</li>
+        <li><strong>撤回</strong> - BIP 被其作者撤回。</li>
+        <li><strong>最终</strong> - 这个 BIP 代表了最终标准。BIP 的状态只有在它已经完成了相当长一段时间并且不太可能被替换或废弃时才会变为最终状态。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>BIP 讨论</h2>
+      <p>我们强烈建议单独的 BIP 包含一个单一的关键提案或新想法。小的增强或补丁通常不需要 BIP，而应该通过 GitHub pull request 流程直接提交到相关项目代码库。BIP 的更大范围是单一的更改，可能由多个相关但独立的部分组成，这些部分可能被单独实现。BIP 应该收集与其提案相关的所有讨论，并保持信息流畅。</p>
+    </section>
+
+    <section>
+      <h2>转移 BIP 所有权</h2>
+      <p>有时需要将 BIP 转移给新的负责人。一般来说，最好保留原始作者作为共同作者，如果原始作者不想被视为共同作者，则可以将其列在致谢部分。转移所有权的原因可能包括：原始作者不再有时间或兴趣维护 BIP，原始作者不再能够客观地评估各种权衡，或者原始作者希望将维护职责转移给更合适的人。</p>
+    </section>
+
+    <section>
+      <h2>BIP 编辑职责</h2>
+      <p>对于每个新的 BIP，编辑执行以下操作：</p>
+      <ul>
+        <li>阅读 BIP 以检查它是否准备好：技术上合理，语言（拼写，语法，句子结构等）可接受</li>
+        <li>如果 BIP 没有准备好，编辑将把它送回给作者进行修改，并附上具体的说明</li>
+        <li>一旦 BIP 准备好，编辑将：
+          <ul>
+            <li>分配 BIP 编号</li>
+            <li>将状态更改为"草稿"</li>
+            <li>将 BIP 添加到 git 存储库</li>
+            <li>通知 BIP 作者 BIP 编号和更改后的状态</li>
+          </ul>
+        </li>
+      </ul>
+      <p>BIP 编辑的职责是判断 BIP 是否准备好，而不是判断 BIP 是否"好"。如果编辑认为 BIP 不好，他们应该允许它继续进行 BIP 流程，并让社区来决定其价值。</p>
+    </section>
+
+    <section>
+      <h2>历史</h2>
+      <p>这个文档受到 Python 增强提案（PEP）流程的启发，特别是 PEP-0001。在许多方面，它直接从 PEP-0001 中复制了文本。虽然 Bitcoin Core 开发人员在 BIP 流程中扮演着类似于 Python 核心开发人员在 PEP 流程中的角色，但 Bitcoin Core 开发人员的权力有限。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>本文档是 <a href="https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki">BIP-0001</a> 的中文翻译版本。</p>
+    <p>原始内容采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    <p>翻译内容采用相同许可证授权。</p>
+  </footer>
+</body>
+</html>
