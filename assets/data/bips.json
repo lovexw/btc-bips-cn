@@ -16,12 +16,36 @@
     "layer": "流程"
   },
   {
-    "number": 9,
-    "title": "版本位的替代方案",
+    "number": 3,
+    "title": "更新的 BIP 流程",
     "author": "Amir Taaki",
-    "status": "撤回",
+    "status": "替换",
+    "type": "流程",
+    "layer": "流程"
+  },
+  {
+    "number": 8,
+    "title": "基于高度锁定的版本位",
+    "author": "Shaolin Fry",
+    "status": "草稿",
     "type": "标准",
     "layer": "共识"
+  },
+  {
+    "number": 9,
+    "title": "带超时和延迟的版本位",
+    "author": "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell",
+    "status": "最终",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 10,
+    "title": "多重签名交易分发",
+    "author": "Alan Reiner",
+    "status": "撤回",
+    "type": "信息",
+    "layer": "应用"
   },
   {
     "number": 11,
@@ -32,8 +56,16 @@
     "layer": "应用"
   },
   {
+    "number": 12,
+    "title": "OP_EVAL",
+    "author": "Gavin Andresen",
+    "status": "撤回",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
     "number": 13,
-    "title": "地址格式的脚本操作码",
+    "title": "支付到脚本哈希的地址格式",
     "author": "Gavin Andresen",
     "status": "最终",
     "type": "标准",
@@ -41,27 +73,59 @@
   },
   {
     "number": 14,
-    "title": "多重签名交易的协议规范",
-    "author": "Gavin Andresen",
-    "status": "提议",
+    "title": "协议版本和用户代理",
+    "author": "Amir Taaki, Patrick Strateman",
+    "status": "最终",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 15,
+    "title": "别名",
+    "author": "Amir Taaki",
+    "status": "撤回",
     "type": "标准",
     "layer": "应用"
   },
   {
     "number": 16,
-    "title": "支付请求的 CHECKLOCKTIMEVERIFY",
+    "title": "支付到脚本哈希",
     "author": "Gavin Andresen",
-    "status": "撤回",
+    "status": "最终",
     "type": "标准",
     "layer": "共识"
   },
   {
     "number": 17,
-    "title": "OP_CHECKLOCKTIMEVERIFY",
-    "author": "Peter Todd",
-    "status": "最终",
+    "title": "OP_CHECKHASHVERIFY (CHV)",
+    "author": "Luke Dashjr",
+    "status": "撤回",
     "type": "标准",
     "layer": "共识"
+  },
+  {
+    "number": 18,
+    "title": "hashScriptCheck",
+    "author": "Luke Dashjr",
+    "status": "提议",
+    "type": "标准",
+    "layer": "共识"
+  },
+  {
+    "number": 19,
+    "title": "M-of-N 标准交易（低 SigOp）",
+    "author": "Luke Dashjr",
+    "status": "草稿",
+    "type": "标准",
+    "layer": "应用"
+  },
+  {
+    "number": 20,
+    "title": "URI 方案",
+    "author": "Luke Dashjr",
+    "status": "替换",
+    "type": "标准",
+    "layer": "应用"
   },
   {
     "number": 21,
