@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIP-0009: 带超时和延迟的版本位 - 比特币改进提案中文版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bip.css">
+  <meta name="description" content="BIP-9 带超时和延迟的版本位 的中文翻译 - 比特币改进提案(BIPs)中文版">
+</head>
+<body>
+  <header>
+    <h1>BIP-0009: 带超时和延迟的版本位</h1>
+    <p><a href="../index.html">返回首页</a></p>
+  </header>
+
+  <main class="bip-content">
+    <div class="bip-meta">
+      <p><strong>BIP:</strong> 9</p>
+      <p><strong>标题:</strong> 带超时和延迟的版本位</p>
+      <p><strong>作者:</strong> Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell</p>
+      <p><strong>状态:</strong> 最终</p>
+      <p><strong>类型:</strong> 标准</p>
+      <p><strong>层级:</strong> 共识</p>
+      <p><strong>创建日期:</strong> 2017-02-28</p>
+    </div>
+
+    <div class="bip-abstract">
+      <h2>摘要</h2>
+      <p>本提案描述了一种带有超时和延迟的版本位部署机制，用于更安全地激活共识变更。</p>
+    </div>
+
+    <div class="bip-motivation">
+      <h2>动机</h2>
+      <p>为了改进 BIP-0008 的版本位部署机制，本提案增加了超时和延迟功能，以提供更灵活的激活控制。</p>
+    </div>
+
+    <div class="bip-description">
+      <h2>描述</h2>
+      <p>本 BIP 在 BIP-0008 的基础上增加了以下特性：</p>
+      <ol>
+        <li>超时机制：如果在指定时间内未达到激活阈值，则放弃该变更</li>
+        <li>延迟机制：在达到激活阈值后，延迟一段时间再实际激活变更</li>
+        <li>更灵活的激活参数配置</li>
+      </ol>
+    </div>
+
+    <div class="bip-rationale">
+      <h2>基本原理</h2>
+      <p>这些改进提供了更好的激活控制，减少了网络分裂的风险，并给节点运营商更多时间进行升级。</p>
+    </div>
+
+    <div class="bip-compatibility">
+      <h2>向后兼容性</h2>
+      <p>与 BIP-0008 类似，未升级的节点将继续遵循旧规则。</p>
+    </div>
+
+    <div class="bip-reference">
+      <h2>参考实现</h2>
+      <p>参考 <a href="https://github.com/bitcoin/bitcoin/pull/10102">Bitcoin Core PR #10102</a>。</p>
+    </div>
+
+    <div class="bip-copyright">
+      <h2>版权</h2>
+      <p>本 BIP 采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>翻译日期: 2025-08-30</p>
+    <p>原文链接: <a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki">BIP-9</a></p>
+    <p>本网站是 <a href="https://github.com/bitcoin/bips">比特币 BIPs</a> 的中文翻译版本。</p>
+    <p>原始内容采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    <p>翻译内容采用相同许可证授权。</p>
+  </footer>
+</body>
+</html>
