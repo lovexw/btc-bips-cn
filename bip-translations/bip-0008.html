@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIP-0008: 基于高度锁定的版本位 - 比特币改进提案中文版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bip.css">
+  <meta name="description" content="BIP-8 基于高度锁定的版本位 的中文翻译 - 比特币改进提案(BIPs)中文版">
+</head>
+<body>
+  <header>
+    <h1>BIP-0008: 基于高度锁定的版本位</h1>
+    <p><a href="../index.html">返回首页</a></p>
+  </header>
+
+  <main class="bip-content">
+    <div class="bip-meta">
+      <p><strong>BIP:</strong> 8</p>
+      <p><strong>标题:</strong> 基于高度锁定的版本位</p>
+      <p><strong>作者:</strong> Shaolin Fry</p>
+      <p><strong>状态:</strong> 草稿</p>
+      <p><strong>类型:</strong> 标准</p>
+      <p><strong>层级:</strong> 共识</p>
+      <p><strong>创建日期:</strong> 2017-02-01</p>
+    </div>
+
+    <div class="bip-abstract">
+      <h2>摘要</h2>
+      <p>本提案描述了一种基于区块高度的版本位锁定机制，用于安全地部署共识变更。</p>
+    </div>
+
+    <div class="bip-motivation">
+      <h2>动机</h2>
+      <p>比特币网络需要一种安全可靠的方式来激活共识变更，同时最小化网络分裂的风险。</p>
+    </div>
+
+    <div class="bip-description">
+      <h2>描述</h2>
+      <p>本 BIP 提出了一种机制，通过以下步骤激活共识变更：</p>
+      <ol>
+        <li>在特定的区块高度开始信号期</li>
+        <li>在信号期内，矿工可以表示支持变更</li>
+        <li>如果在信号期内达到阈值支持，变更将在锁定高度激活</li>
+        <li>如果在信号期内未达到阈值，变更将被拒绝</li>
+      </ol>
+    </div>
+
+    <div class="bip-rationale">
+      <h2>基本原理</h2>
+      <p>基于区块高度的锁定机制提供了确定性激活时间，减少了不确定性，并允许节点和用户提前准备。</p>
+    </div>
+
+    <div class="bip-compatibility">
+      <h2>向后兼容性</h2>
+      <p>未升级的节点将继续遵循旧规则，直到它们升级为止。</p>
+    </div>
+
+    <div class="bip-reference">
+      <h2>参考实现</h2>
+      <p>参考 <a href="https://github.com/bitcoin/bitcoin/pull/10101">Bitcoin Core PR #10101</a>。</p>
+    </div>
+
+    <div class="bip-copyright">
+      <h2>版权</h2>
+      <p>本 BIP 采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>翻译日期: 2025-08-30</p>
+    <p>原文链接: <a href="https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki">BIP-8</a></p>
+    <p>本网站是 <a href="https://github.com/bitcoin/bips">比特币 BIPs</a> 的中文翻译版本。</p>
+    <p>原始内容采用 <a href="https://creativecommons.org/licenses/by/3.0/">创作共用署名 3.0 许可证</a>授权。</p>
+    <p>翻译内容采用相同许可证授权。</p>
+  </footer>
+</body>
+</html>
